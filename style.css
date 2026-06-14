@@ -18,60 +18,60 @@
 
 /* THEME 2: Royal Purple & Gold
 :root {
-  --primary: #6a1b9a;
-  --secondary: #ab47bc;
-  --accent: #ce93d8;
-  --background: #0a0010;
-  --surface: rgba(106,27,154,0.12);
-  --surface-solid: #120020;
-  --text: #ffffff;
-  --text-light: rgba(255,255,255,0.75);
-  --gold: #ffd700;
-  --gold2: #ffe44d;
-  --shadow: rgba(106,27,154,0.5);
-  --gradient-main: linear-gradient(135deg, #0a0010 0%, #15002a 40%, #0a0010 100%);
-  --gradient-hero: linear-gradient(135deg, #6a1b9a22, #ab47bc44, #6a1b9a22);
-  --glow: 0 0 30px rgba(106,27,154,0.5), 0 0 60px rgba(106,27,154,0.3);
+    --primary: #6a1b9a;
+    --secondary: #ab47bc;
+    --accent: #ce93d8;
+    --background: #0a0010;
+    --surface: rgba(106,27,154,0.12);
+    --surface-solid: #120020;
+    --text: #ffffff;
+    --text-light: rgba(255,255,255,0.75);
+    --gold: #ffd700;
+    --gold2: #ffe44d;
+    --shadow: rgba(106,27,154,0.5);
+    --gradient-main: linear-gradient(135deg, #0a0010 0%, #15002a 40%, #0a0010 100%);
+    --gradient-hero: linear-gradient(135deg, #6a1b9a22, #ab47bc44, #6a1b9a22);
+    --glow: 0 0 30px rgba(106,27,154,0.5), 0 0 60px rgba(106,27,154,0.3);
 } */
 
-/* THEME 3: Elegant Midnight Blue
-:root {
-  --primary: #1565c0;
-  --secondary: #1e88e5;
-  --accent: #64b5f6;
-  --background: #020815;
-  --surface: rgba(21,101,192,0.1);
-  --surface-solid: #05101f;
-  --text: #ffffff;
-  --text-light: rgba(255,255,255,0.75);
-  --gold: #f4c430;
-  --gold2: #ffdb70;
-  --shadow: rgba(21,101,192,0.5);
-  --gradient-main: linear-gradient(135deg, #020815 0%, #071530 40%, #020815 100%);
-  --gradient-hero: linear-gradient(135deg, #1565c022, #1e88e544, #1565c022);
-  --glow: 0 0 30px rgba(21,101,192,0.5), 0 0 60px rgba(21,101,192,0.3);
+/* THEME 3: Elegant Midnight Blue */
+/* :root {
+    --primary: #1565c0;
+    --secondary: #1e88e5;
+    --accent: #64b5f6;
+    --background: #020815;
+    --surface: rgba(21,101,192,0.1);
+    --surface-solid: #05101f;
+    --text: #ffffff;
+    --text-light: rgba(255,255,255,0.75);
+    --gold: #f4c430;
+    --gold2: #ffdb70;
+    --shadow: rgba(21,101,192,0.5);
+    --gradient-main: linear-gradient(135deg, #020815 0%, #071530 40%, #020815 100%);
+    --gradient-hero: linear-gradient(135deg, #1565c022, #1e88e544, #1565c022);
+    --glow: 0 0 30px rgba(21,101,192,0.5), 0 0 60px rgba(21,101,192,0.3);
 } */
 
-/* THEME 4: Birthday Celebration Pink
-:root {
-  --primary: #e91e63;
-  --secondary: #ff4081;
-  --accent: #ff80ab;
-  --background: #0d0010;
-  --surface: rgba(233,30,99,0.1);
-  --surface-solid: #180018;
-  --text: #ffffff;
-  --text-light: rgba(255,255,255,0.75);
-  --gold: #ffc107;
-  --gold2: #ffd54f;
-  --shadow: rgba(233,30,99,0.5);
-  --gradient-main: linear-gradient(135deg, #0d0010 0%, #1c0020 40%, #0d0010 100%);
-  --gradient-hero: linear-gradient(135deg, #e91e6322, #ff408144, #e91e6322);
-  --glow: 0 0 30px rgba(233,30,99,0.5), 0 0 60px rgba(233,30,99,0.3);
+/* THEME 4: Birthday Celebration Pink */
+/* :root {
+    --primary: #e91e63;
+    --secondary: #ff4081;
+    --accent: #ff80ab;
+    --background: #0d0010;
+    --surface: rgba(233,30,99,0.1);
+    --surface-solid: #180018;
+    --text: #ffffff;
+    --text-light: rgba(255,255,255,0.75);
+    --gold: #ffc107;
+    --gold2: #ffd54f;
+    --shadow: rgba(233,30,99,0.5);
+    --gradient-main: linear-gradient(135deg, #0d0010 0%, #1c0020 40%, #0d0010 100%);
+    --gradient-hero: linear-gradient(135deg, #e91e6322, #ff408144, #e91e6322);
+    --glow: 0 0 30px rgba(233,30,99,0.5), 0 0 60px rgba(233,30,99,0.3);
 } */
 
 /* ============================================
-   RESET & BASE
+    RESET & BASE
    ============================================ */
 *,
 *::before,
@@ -127,7 +127,7 @@ body {
 }
 
 /* ============================================
-   LOADING SCREEN
+    LOADING SCREEN
    ============================================ */
 #loading-screen {
     position: fixed;
