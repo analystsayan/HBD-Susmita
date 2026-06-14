@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Susmita ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-trail" id="cursor-trail"></div>
+
+<!-- Screen Glow Effect -->
+<div class="screen-glow" id="screen-glow"></div>
+
+<!-- Loading Screen -->
+<div id="loading-screen">
+  <div class="loading-cake-emoji">🎂</div>
+  <div class="loading-title">Happy 25th Birthday Khepiiiii 🎂</div>
+  <div class="loading-hearts">
+    <span>❤️</span><span>💕</span><span>❤️</span>
+  </div>
+  <div class="loading-bar">
+    <div class="loading-bar-fill"></div>
+  </div>
+</div>
+
+<!-- Particle Canvas -->
+<canvas id="particle-canvas"></canvas>
+
+<!-- Heart Rain Canvas -->
+<canvas id="heart-canvas"></canvas>
+
+<!-- Music Player -->
+<div class="music-player" id="music-player" title="Birthday Music">
+  <span class="music-note">🎵</span>
+  <span class="music-label">Birthday Music</span>
+</div>
+
+<!-- HERO SECTION -->
+<section id="hero">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-content">
+    <span class="hero-emoji">🎉</span>
+    <h1 class="hero-title">Happy Birthday<br>Susmita ❤️</h1>
+    <p class="hero-subtitle">Today is all about celebrating the most beautiful person in my life.</p>
+    <div class="hero-buttons">
+      <button class="btn-primary" onclick="startSurprise()">🎁 Start the Surprise</button>
+      <button class="btn-secondary" onclick="toggleMusic()">🎵 Play Birthday Music</button>
+    </div>
+    <div class="hero-photo-container">
+      <img class="hero-photo" src="/media/IMG_20260125_165054.jpg" alt="Susmita">
+      <div class="hero-photo-ring"></div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll for more magic</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<div class="section-divider">✦ ❤️ ✦ 🌸 ✦ ❤️ ✦</div>
+
+<!-- BIRTHDAY CAKE SECTION -->
+<section id="cake-section">
+  <h2 class="section-title reveal">🎂 Make a Wish!</h2>
+  <div class="cake-container reveal" onclick="blowCandles()">
+    <div class="cake">
+      <!-- Candles on top tier -->
+      <div class="candles" id="candles">
+        <div class="candle"><div class="candle-flame" id="flame1"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="candle-flame" id="flame2"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="candle-flame" id="flame3"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="candle-flame" id="flame4"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="candle-flame" id="flame5"></div><div class="candle-body"></div></div>
+      </div>
+      
+      <div class="cake-top-tier" style="position:relative">
+        <div class="frosting-top"></div>
+        <div class="cake-decoration">🌸</div>
+      </div>
+      <div class="cake-mid-tier" style="position:relative">
+        <div class="frosting-top"></div>
+        <div class="cake-decoration">Happy Birthday</div>
+      </div>
+      <div class="cake-bottom-tier" style="position:relative">
+        <div class="cake-decoration">✨ Susmita ✨</div>
+      </div>
+      <div class="cake-plate"></div>
+    </div>
+  </div>
+  <p class="reveal" style="color:var(--text-light); margin-top:1.5rem; font-style:italic">Click the cake to blow out the candles! 🌬️</p>
+  <div class="cake-wish" id="cake-wish">✨ May all your dreams come true, Susmita ✨</div>
+</section>
+
+<div class="section-divider">✦ 📸 ✦ 🌺 ✦ 📸 ✦</div>
+
+<!-- MEMORY GALLERY -->
+<section id="gallery">
+  <h2 class="section-title reveal">📸 Our Beautiful Memories</h2>
+  <div class="gallery-grid">
+    <div class="gallery-item reveal" onclick="openLightbox(0)">
+      <img src="/media/IMG_20250429_174748.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Our happy smiles 💕</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(1)">
+      <img src="/media/IMG_20260216_210329.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Radiant in red ❤️</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(2)">
+      <img src="/media/IMG_20260308_151923.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Lazy afternoon ☀️</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(3)">
+      <img src="/media/1667149142438-01.jpeg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Temple moments 🙏</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(4)">
+      <img src="/media/IMG_20251107_231448~2.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Cultural adventures 🏛️</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(5)">
+      <img src="/media/IMG_20260216_193347.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Always beautiful 👗</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(6)">
+      <img src="/media/IMG_20260308_151236~2.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Captivating eyes ✨</span></div>
+    </div>
+    <div class="gallery-item reveal" onclick="openLightbox(7)">
+      <img src="/media/IMG_20260308_151259.jpg">
+      <div class="gallery-overlay"><span class="gallery-overlay-text">Dreaming away 🌿</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <button id="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img id="lightbox-img" src="" alt="Memory">
+  <div class="lightbox-nav">
+    <button onclick="changeLightboxImage(-1)">← Previous</button>
+    <button onclick="changeLightboxImage(1)">Next →</button>
+  </div>
+</div>
+
+<div class="section-divider">✦ 💝 ✦ 🌸 ✦ 💝 ✦</div>
+
+<!-- REASONS I LOVE YOU -->
+<section id="love-reasons">
+  <h2 class="section-title reveal">💝 Why You Are So Special</h2>
+  <div class="cards-grid">
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">😊</div>
+          <div class="card-title">Your Smile</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">Your smile lights up every room and makes my heart skip a beat every single time. 🌟</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">💝</div>
+          <div class="card-title">Your Kindness</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">The way you care for everyone around you shows what a beautiful soul you truly are. ❤️</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">💪</div>
+          <div class="card-title">Your Strength</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">You face every challenge with grace and courage that inspires me every single day. 🦋</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">💖</div>
+          <div class="card-title">Your Heart</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">Your heart is the most beautiful place I have ever been welcomed into. 🏡</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">🤝</div>
+          <div class="card-title">Your Support</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">You are always by my side, my greatest support and my truest companion. 🌙</p>
+        </div>
+      </div>
+    </div>
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+          <div class="card-icon">✨</div>
+          <div class="card-title">Your Beautiful Soul</div>
+        </div>
+        <div class="flip-card-back">
+          <p class="card-back-text">Everything about you is magical — your soul shines brighter than any star. 🌟</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">✦ 💌 ✦ 🌹 ✦ 💌 ✦</div>
+
+<!-- BIRTHDAY LETTER -->
+<section id="love-letter">
+  <h2 class="section-title reveal">💌 A Letter For You</h2>
+  <div class="letter-card reveal" id="letter-card">
+    <div class="letter-salutation">My Dearest Khepiiiii,</div>
+    <p class="letter-line" id="line1">On this very special day, I want you to know how deeply you are loved.</p>
+    <p class="letter-line" id="line2">Every morning I wake up grateful that I get to share this life with you.</p>
+    <p class="letter-line" id="line3">Your laugh is my favorite sound, your smile is my favorite sight, and your love is my greatest treasure.</p>
+    <p class="letter-line" id="line4">You have brought so much happiness, warmth, and meaning into my world — more than you could ever know.</p>
+    <p class="letter-line" id="line5">Today is your day, and I hope it is as wonderful as you make every day feel for me.</p>
+    <p class="letter-line" id="line6">Happy Birthday, my love. Today, tomorrow, and always — I am yours.</p>
+    <div class="letter-sign">Forever and always yours ❤️</div>
+    <span class="letter-heart">💕</span>
+  </div>
+</section>
+
+<div class="section-divider">✦ 💬 ✦ 🌸 ✦ 💬 ✦</div>
+
+<!-- INTERACTIVE LOVE WALL -->
+<section id="love-wall">
+  <h2 class="section-title reveal">💬 Words From My Heart</h2>
+  <div class="love-wall-container reveal" id="love-wall-container">
+  </div>
+</section>
+
+<div class="section-divider">✦ 💫 ✦ 🎊 ✦ 💫 ✦</div>
+
+<!-- LOVE COUNTERS -->
+<section id="counters">
+  <h2 class="section-title reveal">💫 Our Beautiful Story in Numbers</h2>
+  <div class="counters-grid">
+    <div class="counter-card reveal">
+      <div class="counter-number" data-target="187" data-suffix="">0</div>
+      <div class="counter-label">Days Together (Official)</div>
+    </div>
+    <div class="counter-card reveal">
+      <div class="counter-number" data-target="20" data-suffix="+">0</div>
+      <div class="counter-label">Memories Created</div>
+    </div>
+    <div class="counter-card reveal">
+      <div class="counter-number" data-target="∞" data-suffix="" data-special="true">∞</div>
+      <div class="counter-label">Reasons I Love You</div>
+    </div>
+    <div class="counter-card reveal">
+      <div class="counter-number" data-target="1" data-suffix="">0</div>
+      <div class="counter-label">Person Who Makes My World Complete</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">✦ 🌟 ✦ 🎈 ✦ 🌟 ✦</div>
+
+<!-- BIRTHDAY WISHES -->
+<section id="wishes">
+  <h2 class="section-title reveal">🌟 Birthday Wishes For You</h2>
+  <div class="wishes-grid">
+    <div class="wish-card reveal">
+      <span class="wish-emoji">🌹</span>
+      <div class="wish-title">Good Health</div>
+      <div class="wish-desc">May you always be healthy, strong, and glowing with life</div>
+    </div>
+    <div class="wish-card reveal">
+      <span class="wish-emoji">😊</span>
+      <div class="wish-title">Happiness</div>
+      <div class="wish-desc">May joy fill every corner of your beautiful life</div>
+    </div>
+    <div class="wish-card reveal">
+      <span class="wish-emoji">🏆</span>
+      <div class="wish-title">Success</div>
+      <div class="wish-desc">May every dream you chase come true beyond imagination</div>
+    </div>
+    <div class="wish-card reveal">
+      <span class="wish-emoji">🌙</span>
+      <div class="wish-title">Dreams Fulfilled</div>
+      <div class="wish-desc">May all your wishes be granted, big and small alike</div>
+    </div>
+    <div class="wish-card reveal">
+      <span class="wish-emoji">🌸</span>
+      <div class="wish-title">Endless Smiles</div>
+      <div class="wish-desc">May laughter and smiles follow you everywhere you go</div>
+    </div>
+    <div class="wish-card reveal">
+      <span class="wish-emoji">💝</span>
+      <div class="wish-title">Beautiful Memories</div>
+      <div class="wish-desc">May this birthday create the most beautiful memories yet</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider">✦ 🎁 ✦ 💎 ✦ 🎁 ✦</div>
+
+<!-- SURPRISE SECTION -->
+<section id="surprise">
+  <h2 class="section-title reveal">🎁 A Special Surprise</h2>
+  <button class="surprise-btn reveal" id="surprise-btn" onclick="triggerSurprise()">
+    🎁<br>Open Birthday<br>Surprise
+  </button>
+  <div id="surprise-reveal">
+    <div class="surprise-headline">Happy Birthday My Love</div>
+    <img src="/media/Screenshot_2021-04-26-23-55-59-420_com.whatsapp.jpg" class="surprise-photo">
+    <p class="surprise-message">Thank you for bringing happiness, love, strength, and meaning into my life. Every day with you is a celebration.</p>
+    <p class="surprise-love">I love you more than words can ever express. ❤️</p>
+  </div>
+</section>
+
+<div class="section-divider">✦ 🌟 ✦ ⭐ ✦ 🌟 ✦</div>
+
+<!-- FINAL SECTION -->
+<section id="finale">
+  <div class="star-field" id="star-field"></div>
+  <h1 class="finale-title reveal">Happy Birthday<br>Susmita ❤️</h1>
+  <p class="finale-subtitle reveal">Today, Tomorrow, and Forever.</p>
+  <img class="finale-photo reveal" src="/media/IMG_20260116_191211.jpg">
+  <div class="hero-buttons reveal" style="margin-top:2.5rem; position:relative; z-index:2;">
+    <button class="btn-primary" onclick="replaySurprise()">🔄 Replay Surprise</button>
+    <button class="btn-secondary" onclick="triggerHeartRain(100)">💕 More Hearts!</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Made With Endless Love For <span>Susmita</span> ❤️ &copy; <span id="year"></span></p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
